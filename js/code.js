@@ -52,7 +52,7 @@ window.onload = function(){
 
         textSyle = {font: '18px Arial', fill: '#0095DD'};
         scoreText = game.add.text(5,5, 'Points: 0', textSyle);
-        livesText = game.add.text(game.world.width-5, 5, 'Lives: ' + lives, textSyle);
+        livesText = game.add.text(game.world.width-5, 5, 'Vidas: ' + lives, textSyle);
         livesText.anchor.set(1,0);
         lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', textSyle);
         lifeLostText.anchor.set(0.5);
@@ -136,7 +136,7 @@ window.onload = function(){
 		fx.play("death");
         lives--;
         if(lives){
-            livesText.setText('Lives: ' + lives);
+            livesText.setText('Vidas: ' + lives);
             lifeLostText.visible = true;
             ball.reset(game.world.width*0.5, game.world.height-25);
             paddle.reset(game.world.width*0.5, game.world.height-5);
